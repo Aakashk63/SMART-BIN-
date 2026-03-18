@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBin AI - Intelligent City Control</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cube"></i> SMARTBIN<span class="text-glow-blue">AI</span>
+            </a>
+            <div class="sys-status">
+                <div class="blinker"></div> SYSTEM ONLINE
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Interface</a></li>
+                <li><a href="report.html">Data Uplink</a></li>
+                <li><a href="dashboard.html">Core HUD</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <div class="badge mono">VERSION 3.0.4 <i class="fa-solid fa-satellite-dish" style="margin-left: 0.5rem;"></i></div>
+                <h1>AI-Powered Waste<br>Intelligence System</h1>
+                <p>Deploying predictive analytics and crowdsourced geolocation to optimize municipal waste logistics. Experience the neuro-routed collection grid.</p>
+                <div class="hero-buttons">
+                    <a href="report.html" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Uplink Report</a>
+                    <a href="dashboard.html" class="btn btn-secondary"><i class="fa-solid fa-network-wired"></i> Access HUD</a>
+                </div>
+            </div>
+            
+            <div class="hero-image fade-in" style="animation-delay: 0.2s;">
+                <div class="holo-panel">
+                    <div class="floating-cards">
+                        <div class="float-card fc-1"><i class="fa-solid fa-database"></i> BINS MONITORED: <span class="counter" data-target="124">0</span></div>
+                        <div class="float-card fc-2"><i class="fa-solid fa-bolt"></i> EFFICIENCY: +32%</div>
+                        <div class="float-card fc-3"><i class="fa-solid fa-brain"></i> AI: ACTIVE</div>
+                    </div>
+                    
+                    <i class="fa-solid fa-truck-fast holo-truck"></i>
+                    
+                    <div class="data-bars" style="width: 80%;">
+                        <div class="mono text-muted" style="font-size: 0.75rem;">NEURAL ROUTING PROGRESS</div>
+                        <div class="data-bar">
+                            <div class="data-fill" style="width: 78%;"></div>
+                        </div>
+                        <div class="mono text-muted" style="font-size: 0.75rem; margin-top: 0.5rem;">PREDICTIVE ACCURACY</div>
+                        <div class="data-bar">
+                            <div class="data-fill green" style="width: 94%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- AI Visualization Section -->
+    <section class="solution" style="padding-top: 2rem;">
+        <div class="container">
+            <h2 class="section-title text-glow-blue mono">AI DETECTION ENGINE</h2>
+            <p class="section-subtitle">Real-time optical analysis of municipal waste receptacles via deep learning.</p>
+            
+            <div class="ai-vis-container">
+                <div class="ai-scan-box">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Scanning bin">
+                    <div class="ai-scan-line-v"></div>
+                    <div class="ai-bounding-box">
+                        <div class="ai-label">BIN [FULL] - 99.2%</div>
+                    </div>
+                </div>
+                
+                <div class="solution-text glass-panel" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;">
+                    <div class="solution-item">
+                        <i class="fa-solid fa-crosshairs text-glow-red" style="color: var(--neon-red);"></i>
+                        <div>
+                            <h4 class="mono text-glow-red">CRITICAL MASS [FULL]</h4>
+                            <p>Neural net detects overflow probabilities above 90%. Automatic route intercept triggered.</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <i class="fa-solid fa-triangle-exclamation text-glow-yellow" style="color: var(--neon-yellow);"></i>
+                        <div>
+                            <h4 class="mono" style="color: var(--neon-yellow);">WARNING THRESHOLD [HALF]</h4>
+                            <p>Capacity reaching median limits. Added to predictive scheduling matrix.</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <i class="fa-solid fa-check text-glow-green" style="color: var(--neon-green);"></i>
+                        <div>
+                            <h4 class="mono text-glow-green">NOMINAL [EMPTY]</h4>
+                            <p>Receptacle cleared. Logistics paths updated dynamically to bypass location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; opacity: 0.5; font-size: 1.25rem;">
+                <i class="fa-solid fa-cube"></i> SMARTBIN<span class="text-glow-blue">AI</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

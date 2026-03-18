@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core HUD - SmartBin AI</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                     <i class="fa-solid fa-cube"></i> SMARTBIN<span class="text-glow-blue">AI</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link active">
+                    <i class="fa-solid fa-layer-group"></i> MAIN HUD
+                </a>
+                <a href="report.html" class="sidebar-link">
+                    <i class="fa-solid fa-satellite-dish"></i> DATA UPLINK
+                </a>
+                <a href="map.html" class="sidebar-link">
+                    <i class="fa-solid fa-globe"></i> NEURAL MAP
+                </a>
+                <a href="map.html" class="sidebar-link">
+                    <i class="fa-solid fa-network-wired"></i> OPTIMIZER
+                </a>
+            </nav>
+            <div style="padding: 1.5rem; border-top: 1px solid rgba(0,212,255,0.2);">
+                <div class="sys-status" style="justify-content: center;">
+                    <div class="blinker"></div> GRID STABLE
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Panel -->
+        <main class="main-panel">
+            <div class="live-clock" id="live-clock">--:--:-- IST</div>
+            
+            <div style="margin-bottom: 2.5rem;">
+                <h1 style="font-size: 2rem; margin-bottom: 0.25rem;" class="text-glow-blue mono">CITY OVERWATCH [BENGALURU]</h1>
+                <p class="text-muted mono">REAL-TIME TELEMETRY DATA STREAM</p>
+            </div>
+
+            <!-- Stats Grid as HUD Cards -->
+            <div class="hud-grid">
+                <div class="hud-card">
+                    <div class="hud-title">TOTAL BINS MONITORED</div>
+                    <div class="hud-value"><span class="counter" data-target="1248">0</span></div>
+                    <i class="fa-solid fa-trash-can" style="position:absolute; right:1.5rem; bottom:1.5rem; font-size: 2rem; opacity:0.1; color: var(--neon-blue);"></i>
+                </div>
+                <div class="hud-card warning">
+                    <div class="hud-title">CRITICAL / FULL</div>
+                    <div class="hud-value" style="color: var(--neon-yellow); text-shadow: 0 0 10px rgba(255, 176, 0, 0.5);"><span class="counter" data-target="142">0</span></div>
+                    <i class="fa-solid fa-triangle-exclamation" style="position:absolute; right:1.5rem; bottom:1.5rem; font-size: 2rem; opacity:0.2; color: var(--neon-yellow);"></i>
+                </div>
+                <div class="hud-card success">
+                    <div class="hud-title">ROUTE EFFICIENCY</div>
+                    <div class="hud-value" style="color: var(--neon-green); text-shadow: 0 0 10px rgba(0, 255, 159, 0.5);">+<span class="counter" data-target="34">0</span>%</div>
+                    <i class="fa-solid fa-arrow-trend-up" style="position:absolute; right:1.5rem; bottom:1.5rem; font-size: 2rem; opacity:0.2; color: var(--neon-green);"></i>
+                </div>
+                <div class="hud-card purple">
+                    <div class="hud-title">FUEL SAVED (LITERS)</div>
+                    <div class="hud-value"><span class="counter" data-target="864">0</span></div>
+                    <i class="fa-solid fa-gas-pump" style="position:absolute; right:1.5rem; bottom:1.5rem; font-size: 2rem; opacity:0.2; color: var(--neon-purple);"></i>
+                </div>
+            </div>
+
+            <!-- Recent Reports Table (Glass) -->
+            <div class="dashboard-table-container glass-panel">
+                <div class="dashboard-table-header">
+                    <h3 class="mono text-glow-blue" style="font-size: 1rem;"><i class="fa-solid fa-satellite-dish"></i> LIVE SENSOR FEED</h3>
+                    <div class="blinker" style="width: 8px; height: 8px; border-radius: 50%; background: var(--neon-green); box-shadow: 0 0 8px var(--neon-green); animation: blink 1s infinite;"></div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Scan</th>
+                                <th>Coordinates</th>
+                                <th>Status</th>
+                                <th>Sensor Node</th>
+                                <th>Time T-Minus</th>
+                            </tr>
+                        </thead>
+                        <tbody class="mono" style="font-size: 0.875rem;">
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1595278069441-2f03ce88bf0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Bin" class="img-preview" style="border: 1px solid var(--neon-blue);"></td>
+                                <td><span style="color: #fff;">MG Road, CBD</span><br><span class="text-muted">[Sector 7G]</span></td>
+                                <td><span class="status-pill pill-red"><i class="fa-solid fa-triangle-exclamation" style="margin-right:0.3rem;"></i> FULL</span></td>
+                                <td>AI CAM 04</td>
+                                <td>00:02:14</td>
+                            </tr>
+                            <tr>
+                                <td><div class="img-preview" style="display: flex; align-items: center; justify-content: center; border: 1px dashed rgba(255,255,255,0.2);"><i class="fa-solid fa-mobile-screen text-muted"></i></div></td>
+                                <td><span style="color: #fff;">Koramangala 4th Blk</span><br><span class="text-muted">[Sector 9B]</span></td>
+                                <td><span class="status-pill pill-yellow"><i class="fa-solid fa-battery-half" style="margin-right:0.3rem;"></i> HALF</span></td>
+                                <td>CROWD APP</td>
+                                <td>00:15:22</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Bin" class="img-preview" style="border: 1px solid var(--neon-blue);"></td>
+                                <td><span style="color: #fff;">Commercial Street</span><br><span class="text-muted">[Sector 2A]</span></td>
+                                <td><span class="status-pill pill-red"><i class="fa-solid fa-triangle-exclamation" style="margin-right:0.3rem;"></i> FULL</span></td>
+                                <td>CROWD APP</td>
+                                <td>01:04:05</td>
+                            </tr>
+                            <tr>
+                                <td><div class="img-preview" style="display: flex; align-items: center; justify-content: center; border: 1px solid var(--neon-green); background: rgba(0,255,159,0.1);"><i class="fa-solid fa-check text-glow-green"></i></div></td>
+                                <td><span style="color: #fff;">IISc Campus</span><br><span class="text-muted">[Sector 4C]</span></td>
+                                <td><span class="status-pill pill-green"><i class="fa-solid fa-check" style="margin-right:0.3rem;"></i> EMPTY</span></td>
+                                <td>AI CAM 12</td>
+                                <td>02:14:48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
